@@ -27,12 +27,12 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <input type="search" id="aquivaelbuscador" placeholder="Buscar pokemon" autofocus="" autocomplete="on">
+                        <input type="search" id="aquivaelbuscador" placeholder="Search Pokemon" autofocus="" autocomplete="on">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col d-xl-flex justify-content-xl-center align-items-xl-center" id="ImagenPokemon">
-                        <img id="aquivaelpoke" src="assets/img/pokeimg.png">
+                        <img id="aquivaelpoke" src="assets/img/pokeimg.png" alt="Loading...">
                     </div>
                 </div>
                 <div class="row text-nowrap d-xxl-flex align-items-xxl-center infopoke">
@@ -40,56 +40,87 @@
                         <p id="aquivaelid">00</p>
                     </div>
                     <div class="col-9 col-sm-10 col-md-10 col-lg-10 col-xl-9 col-xxl-9 text-nowrap" id="NombrePokemon">
-                        <p class="text-capitalize" id="aquivaelnombre">Name</p>
+                        <p id="aquivaelnombre">Cargando...</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-center" id="BotonesPokemon"><img data-bss-hover-animate="pulse" id="botonizq" src="assets/img/leftbtn.png"><img data-bss-hover-animate="pulse" id="botoncentral" src="assets/img/ctrbtn.png"><img data-bss-hover-animate="pulse" id="botonder" src="assets/img/rightbtn.png"></div>
+                    <div class="col text-center" id="BotonesPokemon">
+                        <img data-bss-hover-animate="pulse" id="botonizq" src="assets/img/leftbtn.png">
+                        <img data-bss-hover-animate="pulse" id="botoncentral" src="assets/img/ctrbtn.png">
+                        <img data-bss-hover-animate="pulse" id="botonder" src="assets/img/rightbtn.png">
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-1" id="colcentral"></div>
+            <div id="colcentral" class="col-xl-1 col-xxl-1 offset-xxl-0">
+                <div class="row central1"></div>
+                <div class="row central2"></div>
+                <div class="row central3"></div>
+            </div>
             <div class="col ladoder">
                 <div class="row empty"></div>
                 <div class="row">
                     <div class="col" id="frame2"><img id="frame2" src="assets/img/frame%202.png"></div>
                 </div>
                 <div class="row row1">
-                    <div class="col text-nowrap d-flex d-sm-flex d-md-flex d-lg-flex d-xxl-flex flex-shrink-1 justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xxl-center align-items-xxl-center" id="botones"><button class="btn btn-primary text-truncate buttons" id="aquivalahabilidad" type="button">Abilities</button><button class="btn btn-primary text-truncate buttons" type="button">Stats</button><button class="btn btn-primary text-truncate buttons" type="button">button3</button><button class="btn btn-primary text-truncate buttons" type="button">button4</button></div>
+                    <div class="col text-nowrap d-flex d-sm-flex d-md-flex d-lg-flex d-xxl-flex flex-shrink-1 justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xxl-center align-items-xxl-center" id="botones">
+                        <button class="btn btn-primary text-truncate buttons" id="aquivabtn1" type="button" onclick="abilities()">Abilities</button>
+                        <button class="btn btn-primary text-truncate buttons" id="aquivabtn2" type="button" onclick="stats()">Stats</button>
+                        <button class="btn btn-primary text-truncate buttons" id="aquivabtn3" type="button" onclick="types()">Type</button>
+                        <button class="btn btn-primary text-truncate buttons" id="aquivabtn4" type="button" onclick="expbase()">Base Exp</button>
+                    </div>
                 </div>
+                <div id="abilities">
                 <div class="row">
                     <div class="col text-start InfoPokemon" id="InfoPokemon1">
-                        <p id="aquivalainfo1" class="aquivalainfo">Ability:</p>
+                        <p id="aquivalainfo1" class="aquivalainfo">-</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col text-start InfoPokemon" id="InfoPokemon2">
-                        <p id="aquivalainfo2" class="aquivalainfo">Ability:</p>
+                        <p id="aquivalainfo2" class="aquivalainfo">-</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col text-start InfoPokemon" id="InfoPokemon3">
-                        <p id="aquivalainfo3" class="aquivalainfo">Ability:</p>
+                        <p id="aquivalainfo3" class="aquivalainfo">-</p>
+                    </div>
+                </div>
+                </div>
+                <div id="stats">
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="StatPokemon1">
+                        <p id="aquivaelstat1" class="aquivalainfo">-</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-start InfoPokemon" id="InfoPokemon4">
-                        <p id="aquivalainfo4" class="aquivalainfo">Ability:</p>
+                    <div class="col text-start InfoPokemon" id="StatPokemon2">
+                        <p id="aquivaelstat2" class="aquivalainfo">-</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-start InfoPokemon" id="button2">
-                        <p id="button2-1" class="aquivalainfo">Stats:</p>
+                    <div class="col text-start InfoPokemon" id="StatPokemon3">
+                        <p id="aquivaelstat3" class="aquivalainfo">-</p>
+                    </div>
+                </div>
+                </div>
+                <div id="types">
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="TypePokemon1">
+                        <p id="aquivaeltype1" class="aquivalainfo">-</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-start InfoPokemon" id="button3">
-                        <p id="buton3-1" class="aquivalainfo">button3:</p>
+                <div class="col text-start InfoPokemon" id="TypePokemon2">
+                    <p id="aquivaeltype2" class="aquivalainfo">-</p>
+                </div>
+                </div>
+                </div>
+                <div id="expbase">
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="ExpPokemon">
+                        <p id="aquivalaexp" class="aquivalainfo"></p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col text-start InfoPokemon" id="button4">
-                        <p id="buton4-1" class="aquivalainfo">button4:</p>
-                    </div>
                 </div>
             </div>
         </div>
