@@ -3,7 +3,7 @@ const getRandom = (min, max) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const random = getRandom(1, 802);
+  const random = getRandom(1, 898);
   fetchData(random);
 });
 
@@ -11,8 +11,8 @@ const fetchData = async (id) => {
   try {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await res.json();
-
     mostrarCarta(data);
+
   } catch (error) {
     console.log(error);
   }
@@ -94,14 +94,14 @@ document.getElementById("botonizq").addEventListener("click", () => {
   fetchData(id);}
 }  )
 document.getElementById("botonder").addEventListener("click", () => {
-  if (id === 889) {
+  if (id === 898) {
     return
   }else
 {  id+=1
   fetchData(id);}
 })
 document.getElementById("botoncentral").addEventListener("click", () => {
-  id = Math.floor(Math.random() * (889 - 1)) + 1;
+  id = Math.floor(Math.random() * (898 - 1)) + 1;
   fetchData(id); 
 })
 
