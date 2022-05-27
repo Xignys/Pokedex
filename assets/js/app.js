@@ -50,26 +50,7 @@ const mostrarCarta = (pokemon) => {
     pokemon.types[1].type.name; // algunos pokemon tienen dos tipos (hierba, veneno, etc etc) si tiene la trae
 };
 
-let id = 0;
-document.getElementById("botonizq").addEventListener("click", () => {
-  if(id === 1){
-    return
-  }else
-{  id-=1
-  fetchData(id);}
-}  )
-document.getElementById("botonder").addEventListener("click", () => {
-  if (id === 889) {
-    return
-  }else
-{  id+=1
-  fetchData(id);}
-})
-document.getElementById("botoncentral").addEventListener("click", () => {
-  id = Math.floor(Math.random() * (889 - 1)) + 1;
-  fetchData(id); 
-})
-
+//hiden
 document.getElementById("abilities").style.display = "block";
 document.getElementById("stats").style.display = "none";
 document.getElementById("types").style.display = "none";
@@ -103,7 +84,24 @@ const expbase = () => {
   document.getElementById("expbase").style.display = "block";
 };
 
-document.getElementById("botoncentral").onclick = () =>{
-  const random = getRandom(1, 802);
-  fetchData(random);
-};
+//Botones
+let id = 0;
+document.getElementById("botonizq").addEventListener("click", () => {
+  if(id === 1){
+    return
+  }else
+{  id-=1
+  fetchData(id);}
+}  )
+document.getElementById("botonder").addEventListener("click", () => {
+  if (id === 889) {
+    return
+  }else
+{  id+=1
+  fetchData(id);}
+})
+document.getElementById("botoncentral").addEventListener("click", () => {
+  id = Math.floor(Math.random() * (889 - 1)) + 1;
+  fetchData(id); 
+})
+
