@@ -9,7 +9,13 @@ div {
 
 body {
   font-family: 'Press Start 2P', serif;
-  background: #c2d6d7;
+  background: url("../img/BG.jpg"), #68a05f;
+  background-repeat: no-repeat;
+  text-transform: capitalize;
+}
+
+.btn{
+  font-size: 10px;   
 }
 
 #ImagenPokemon {
@@ -44,18 +50,18 @@ body {
   padding: 5px 0px 0px 0px;
   color: rgb(68,242,7);
   text-align: center;
-  font-size: 24px;
   margin: 0;
   text-shadow: 0px 0px 3px rgb(0,0,0);
+  font-size: 22px;
 }
 
 #aquivaelnombre {
   padding: 5px 0px 0px 0px;
   color: rgb(68,242,7);
   text-align: center;
-  font-size: 24px;
   text-shadow: 0px 0px 3px rgb(0,0,0);
   margin: 0;
+  font-size: 22px;
 }
 
 #BotonesPokemon {
@@ -84,7 +90,13 @@ body {
   background: #8b0909;
   border-radius: 0px;
   border-style: none;
+  border-right-style: solid;
+  border-right-color: rgb(106,13,13);
+  border-left-style: solid;
+  border-left-color: rgb(106,13,13);
 }
+
+
 
 #aquivaelbuscador {
   border-radius: 17px;
@@ -113,32 +125,13 @@ body {
   border-radius: 17px;
   box-shadow: inset 0px 0px 20px 0px rgb(0,0,0);
   color: rgb(68,242,7);
-  font-size: 24px;
   text-align: center;
-  border: 0.5rem solid rgb(255,255,255) ;
-}
-
-#aquivalainfo {
+  border: 0.5rem solid rgb(255,255,255);
 }
 
 #frame2 {
   width: 100%;
   height: 100%;
-}
-
-#imglogo {
-}
-
-#logo {
-}
-
-#botonizq {
-}
-
-#botoncentral {
-}
-
-#botonder {
 }
 
 #aquivaelpoke {
@@ -164,7 +157,6 @@ body {
   margin-top: 5px;
   margin-bottom: 5px;
   height: 100%;
-  font-size: 9px;
 }
 
 .empty {
@@ -194,4 +186,22 @@ body {
   padding-top: 1rem;
   text-shadow: 0px 0px 3px rgb(0,0,0);
 }
+
+.central1 {
+  height: 10%;
+  border-bottom-style: solid;
+  margin-top: 8px;
+}
+
+.central2 {
+  height: 70%;
+}
+
+.central3 {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  height: 7%;
+}
+
+
 
