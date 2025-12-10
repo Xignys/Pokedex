@@ -66,6 +66,15 @@ const fetchData = async (id) => {
 const mostrarCarta = (pokemon) => {
   console.log(pokemon);
 
+    // IMPORTANTE: actualizamos el id global al del Pokémon cargado
+  id = pokemon.id;
+
+  document
+    .querySelector("#aquivaelpoke")
+    .setAttribute("src", pokemon.sprites.front_default);
+  // ...
+}; 
+
   // Imagen, nombre, id
   document
     .querySelector("#aquivaelpoke")
