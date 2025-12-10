@@ -6,6 +6,7 @@ const getRandom = (min, max) => {
 document.addEventListener("DOMContentLoaded", () => {
   const random = getRandom(1, 802);
   fetchData(random);
+  idInicial(random);
 });
 
 const fetchData = async (id) => {
@@ -86,7 +87,10 @@ const expbase = () => {
 };
 
 //Botones
-let id = getRandom;
+let id;
+function idInicial(num) {
+  id = num;
+}
 document.getElementById("botonizq").addEventListener("click", () => {
   if(id === 1){
     return
