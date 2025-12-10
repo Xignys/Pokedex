@@ -1,3 +1,4 @@
+
 const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
@@ -85,7 +86,7 @@ const expbase = () => {
 };
 
 //Botones
-let id = 0;
+let id = getRandom;
 document.getElementById("botonizq").addEventListener("click", () => {
   if(id === 1){
     return
